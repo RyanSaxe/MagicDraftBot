@@ -1,0 +1,5 @@
+Data/*
+Saved_Models/*
+__pycache__
+.ipynb_checkpoints
+.DS_Store
