@@ -20,4 +20,21 @@ Output/ --- place to store images to show results. Currently only shows 75% test
 
 Data/ and Saved_Models/ --- folders in .gitignore as these cannot be in this repo due to NDA.
 
+### Example Drafts
+
+Below are some decks and drafts that the first iteration of this bot did on MTGO. This was with a different modeling of staying open, and no bias ceiling, but a similar implementation. I will update this section as I continue to test the bot.
+
+Draft: https://magic.flooey.org/draft/show?id=1_fn_hicUYtWQyvXSbjjhtsIy1k
+
+![3-0](https://pbs.twimg.com/media/ELFSpb4XkAAYCrb?format=jpg&name=small)
+
+Draft: https://magic.flooey.org/draft/show?id=9GymyrTy70YDYfHiKh2HRvNodao
+
+![0-0](https://pbs.twimg.com/media/ELFUnzvWkAEFtGn?format=jpg&name=small)
+
+Draft: https://magic.flooey.org/draft/show?id=xg0h8Jo41w2TcHNwwAQ-_UlxxFQ
+
+![0-0](https://pbs.twimg.com/media/ELT3FbHW4AA3V9z?format=jpg&name=small)
+
+
 
