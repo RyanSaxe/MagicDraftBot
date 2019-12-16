@@ -61,7 +61,7 @@ def generate_pack(card_df):
 	pack[idxs] = 1
 	return pack
 
-def read_log(fname,card_df);
+def read_log(fname,card_df):
 	"""
 	process MTGO log file and convert it into tensors so the bot
 	can say what it would do
