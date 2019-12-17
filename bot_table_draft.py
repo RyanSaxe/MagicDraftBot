@@ -2,16 +2,15 @@ from models import DraftNet
 from utils import generate_pack
 import pandas as pd
 import random
+import torch
 #load in model and name map
-model = torch.load('Saved_Models/model_final.pkl')
+model = torch.load('Saved_Models/draft_model.pkl')
 card_df = torch.load('Data/ft.pkl')
 #define draft with 8 players, 3 rounds, and packs of 14 cards
 seats = 8
 n_rounds = 3
 n_sub_rounds = 14
 n_cards = len(card_df)
-
-
 #index circular shuffle per iteration
 pack_shuffle = [7,0,1,2,3,4,5,6]
 #initialize

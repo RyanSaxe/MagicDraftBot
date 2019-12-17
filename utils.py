@@ -1,6 +1,6 @@
 import torch
 import numpy as np
-
+import random
 def train(model,loss_fn,optimizer,x_data,labels,n_batches=64,epochs=20):
 	"""
 	function for training a model in batches. Currently no regularization
