@@ -11,7 +11,7 @@ class RankingNet(torch.nn.Module):
         self.n_archs = num_archetypes
         #goal is transparency. self.ratings.weights is the
         #   parameter we're trying to learn
-        self.ranking_matrix = torch.nn.Parameter(
+        self.rank_matrix = torch.nn.Parameter(
                                 torch.rand(
                                     (self.n_cards,self.n_archs),
                                     requires_grad=True, 
@@ -22,7 +22,7 @@ class RankingNet(torch.nn.Module):
         arch_idx = x[:,0].type(torch.long)
         #get the current options in the pack
         pack = x[:,1 + self.n_cards:]
-        return self.ranking_matrix[:,arch_idx].t() * pack
+        return self.rank_matrix[:,arch_idx].t() * pack
 
 class DraftNet(torch.nn.Module):
     """
@@ -48,27 +48,18 @@ class DraftNet(torch.nn.Module):
                                         )
                                     )
         #vector to express opposition to bias (staying open)
-        #initially this had a stronger decaying structure on top
-        #but I wanted to see what happened when left alone.
-        # -> structure still decays, but spikes for P2P1 and P3P1
-        #    likely due to humans rare-drafting.
-        #original decay structure was implemented in one of two ways:
-        #   1. log(-mx + b)/log(-m + b) where x = pick_number/n
-        #   2. flip(cumsum(self.open_base)) - self.open_base.min()
+        #originally I did not enforce a decaying structure,
+        #    and the bot learned to raredraft. So I added this
+        #    decay via an inverted cumulative sum on these weights
         self.open_base = torch.nn.Parameter(torch.tensor(
-                                            torch.ones(42),
-                                            requires_grad=True,
-                                            dtype=torch.float
-                                        ))
-        #ceiling for the bias to avoid inflexibility later in the draft
-        self.max_pull = torch.nn.Parameter(torch.tensor(
-                                            5,
+                                            torch.zeros(42),
                                             requires_grad=True,
                                             dtype=torch.float
                                         ))
         #placeholder for future versions. Currently doesn't update, but I want to explore that.
         self.arch_bias = torch.nn.Parameter(torch.ones(self.n_archs,requires_grad=False))
         self.relu = torch.nn.ReLU()
+        self.sigmoid = torch.nn.Sigmoid()
     def forward(self,x):
         #gets pool of cards drafted so far
         pool = x[:,:self.n_cards]
@@ -78,20 +69,24 @@ class DraftNet(torch.nn.Module):
         #into self.open_base. Clamp above 42 to enable using
         #the model as an oracle ('what if it had all the red cards').
         pick_n = torch.clamp(pool.sum(1),max=41)
-        open_factor = self.relu(self.open_base[pick_n.type(torch.long)])
+        #squash open_base numbers between 0 and 1
+        open_base = self.sigmoid(self.open_base)
+        #enforce decaying structure over time
+        open_decay = torch.flip(torch.cumsum(open_base,dim=0),dims=[0])
+        #enforce this decay to go to zero
+        open_decay = open_decay - open_decay.min()
+        #get the proper open bias forr each pick
+        open_factor = open_decay[pick_n.type(torch.long)]
         #compute bias towards card drafted so far
         simple_pull = torch.matmul(pool,self.rank_matrix)
         pull_relu = self.relu(simple_pull)
         #I want to explore a version of this model where the pool informs
         #the pull as a probability distribution across archetypes, and then
         #has some memory of past cards seen to also update that distribution
-        #based on what it models as open
-        pull_w_open = (pull_relu * self.arch_bias) + open_factor[:,None]
-        pull_thresh = self.relu(pull_w_open)
-        #place the ceiling on the bias
-        final_pull = torch.where(pull_thresh > self.max_pull, self.max_pull, pull_thresh)
+        #based on what it models as open, but for now this doesn't exist
+        pull_final = (pull_relu * self.arch_bias) + open_factor[:,None]
         #rank every card in the format according to bias
-        pick_rankings = torch.matmul(final_pull,self.rank_matrix.t())
+        pick_rankings = torch.matmul(pull_final,self.rank_matrix.t())
         pick_relu = self.relu(pick_rankings)
         #zero value for all cards that are not in the current pack
         return pick_relu * pack

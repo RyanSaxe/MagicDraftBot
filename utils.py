@@ -1,6 +1,8 @@
 import torch
 import numpy as np
 import random
+import re
+
 def train(model,loss_fn,optimizer,x_data,labels,n_batches=64,epochs=20):
 	"""
 	function for training a model in batches. Currently no regularization
@@ -66,9 +68,11 @@ def read_log(fname,card_df):
 	process MTGO log file and convert it into tensors so the bot
 	can say what it would do
 	"""
+	ignore_cards = ['Plains','Island','Swamp','Mountain','Forest']
 	with open(fname,'r') as f:
 		lines = f.readlines()
-	set_lookup = {v:i for i,v in enumerate(card_df['name'].to_dict())}
+	set_lookup = {v:i for i,v in enumerate(card_df['name'])}
+	print(set_lookup)
 	packs = []
 	picks = []
 	pools = []
