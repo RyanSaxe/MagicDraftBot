@@ -15,7 +15,7 @@ I use L2 regularization on the MLP in attempt to avoid exploding weights. Howeve
 
 ### External Content about this Agent:
 
-* [Lords of Limited Podcast Episode](https://lordsoflimited.libsyn.com/lords-of-limited-129-bot-design-with-ryan-saxe)
+* [Lords of Limited Podcast Episode (@16:25)](https://lordsoflimited.libsyn.com/lords-of-limited-129-bot-design-with-ryan-saxe)
 
 ### Next Step: Add More Features
 
