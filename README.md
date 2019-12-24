@@ -11,6 +11,10 @@ My initial attempt at a Magic: the Gathering Draft AI. The overall structure is 
 
 I use L2 regularization on the MLP in attempt to avoid exploding weights. However this doesn't appear to do enough to fight against an overly strong bias towards one color. I attempted to put a ceiling on the bias, however this led to the bot refusing to commit to an archetype and/or never pass rares. Still working on a solution to this. 
 
+### External Content for this Agent:
+
+* [Lords of Limited Podcast Episode](https://lordsoflimited.libsyn.com/lords-of-limited-129-bot-design-with-ryan-saxe)
+
 ### Next Step: Add More Features
 
 Currently the bot does not look at things like converted mana-cost. CMC is inherrently encoded in the value of cards, however it is important for the bot to understand that even if a 5-cmc card is "better" than a 2-cmc card, it should take the cheaper card if it already has expensive cards.
