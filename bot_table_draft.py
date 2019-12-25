@@ -17,7 +17,8 @@ n_rounds = 3
 n_sub_rounds = 14
 n_cards = len(card_df)
 #index circular shuffle per iteration
-pack_shuffle = [7,0,1,2,3,4,5,6]
+pack_shuffle_right = [7,0,1,2,3,4,5,6]
+pack_shuffle_left = [1,2,3,4,5,6,7,0]
 #initialize
 for_draft_logs = torch.zeros(size=(seats,n_rounds * n_sub_rounds,n_cards * 2))
 names = []
@@ -42,8 +43,11 @@ for larger_round in range(n_rounds):
 			for_draft_logs[idx,pick_n] = torch.cat([packs[idx],pick_encoded])
 			packs[idx][bp] = 0
 			picks[idx][bp] += 1
-		#pass the packs
-		packs = [packs[idx] for idx in pack_shuffle]
+		#pass the packs (left, right, left)
+		if larger_round % 2 == 1:
+			packs = [packs[idx] for idx in pack_shuffle_right]
+		else:
+			packs = [packs[idx] for idx in pack_shuffle_left]
 #display the draft picks
 print(pd.DataFrame(names))
 
