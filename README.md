@@ -1,6 +1,14 @@
 # MagicDraftBot
 
-My initial attempt at a Magic: the Gathering Draft AI. The overall structure is as follows:
+My initial attempt at a Magic: the Gathering (MTG) Draft AI. 
+
+### Game Description
+
+MTG Draft is a game where 8 players sit at a table and each open a pack of 14 MTG cards. They then select one (hidden), and pass the remainder (hidden) to the person to their left. This is repeated until no cards are left, and then repeated two more times (with two more packs) until each player has 42 cards. Then those 42 cards are used to construct a deck to play with. 
+
+*Note: I currently don't have data corresponding to decks built nor games played, so this agent only participates in the card selection (drafting) process.*
+
+### Algorithmic Structure
 
 1. Cluster the dataset into archetypes via Kmeans
 1. for each cluster, learn pick-order given data of P2P2 - P3P14
