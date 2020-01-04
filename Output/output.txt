@@ -1,0 +1,267 @@
+------------------------------------------------------------------------------------------------------------------------
+	RANKINGNET TRAINING OUTPUT
+------------------------------------------------------------------------------------------------------------------------
+
+Epoch:  0
+	Seconds = 15.333173036575317  Accuracy =  0.41632000907612593  Total Loss =  184.81221628189087
+Epoch:  1
+	Seconds = 15.560467004776001  Accuracy =  0.6318466843777182  Total Loss =  83.28586280345917
+Epoch:  2
+	Seconds = 15.321676015853882  Accuracy =  0.6456800949211512  Total Loss =  69.74533498287201
+Epoch:  3
+	Seconds = 15.761852741241455  Accuracy =  0.6471679650569148  Total Loss =  65.78427422046661
+Epoch:  4
+	Seconds = 15.63639211654663  Accuracy =  0.6475544094845517  Total Loss =  64.05753433704376
+
+------------------------------------------------------------------------------------------------------------------------
+	DRAFTNET TRAINING OUTPUT
+------------------------------------------------------------------------------------------------------------------------
+
+	Epoch:  0
+		Seconds = 29.371185779571533  Accuracy =  0.5539208083622061  Total Loss =  136.28419840335846
+	Epoch:  1
+		Seconds = 25.88283896446228  Accuracy =  0.6422381250585261  Total Loss =  64.223557472229
+	Epoch:  2
+		Seconds = 26.295089721679688  Accuracy =  0.6503776395261728  Total Loss =  62.947994351387024
+	Epoch:  3
+		Seconds = 26.042675018310547  Accuracy =  0.654967913077067  Total Loss =  62.215208530426025
+	Epoch:  4
+		Seconds = 26.29664897918701  Accuracy =  0.6584783804663358  Total Loss =  61.55857628583908
+	Epoch:  5
+		Seconds = 25.815124034881592  Accuracy =  0.6619811663077068  Total Loss =  61.008512914180756
+	Epoch:  6
+		Seconds = 26.258004903793335  Accuracy =  0.6654872442410338  Total Loss =  60.448418974876404
+	Epoch:  7
+		Seconds = 25.875899076461792  Accuracy =  0.669290342026407  Total Loss =  59.87551188468933
+	Epoch:  8
+		Seconds = 25.86857295036316  Accuracy =  0.6752435416471579  Total Loss =  59.07425099611282
+	Epoch:  9
+		Seconds = 27.79265570640564  Accuracy =  0.6815709423869277  Total Loss =  58.12193048000336
+	Epoch:  10
+		Seconds = 32.2566659450531  Accuracy =  0.6888907259574866  Total Loss =  57.155852019786835
+	Epoch:  11
+		Seconds = 29.105947256088257  Accuracy =  0.6959244633158537  Total Loss =  56.17586678266525
+	Epoch:  12
+		Seconds = 28.08980107307434  Accuracy =  0.7033869042045136  Total Loss =  55.151293218135834
+	Epoch:  13
+		Seconds = 28.022774934768677  Accuracy =  0.7100577798717109  Total Loss =  54.2688924074173
+	Epoch:  14
+		Seconds = 28.354079961776733  Accuracy =  0.7155149709710648  Total Loss =  53.53431636095047
+	Epoch:  15
+		Seconds = 26.285868883132935  Accuracy =  0.7202318071682741  Total Loss =  52.89232939481735
+	Epoch:  16
+		Seconds = 26.4529869556427  Accuracy =  0.7235260938524204  Total Loss =  52.439275324344635
+	Epoch:  17
+		Seconds = 26.184246063232422  Accuracy =  0.7259830918157131  Total Loss =  52.08534401655197
+	Epoch:  18
+		Seconds = 26.282905101776123  Accuracy =  0.7282495142335427  Total Loss =  51.742994606494904
+	Epoch:  19
+		Seconds = 25.993355751037598  Accuracy =  0.7304457053563065  Total Loss =  51.47375750541687
+	Epoch:  20
+		Seconds = 26.317617177963257  Accuracy =  0.7316059848768613  Total Loss =  51.327971160411835
+	Epoch:  21
+		Seconds = 27.65376901626587  Accuracy =  0.7329348926631707  Total Loss =  51.11770313978195
+	Epoch:  22
+		Seconds = 28.985330820083618  Accuracy =  0.7333800566532447  Total Loss =  51.05194228887558
+	Epoch:  23
+		Seconds = 28.81363797187805  Accuracy =  0.7343183028607548  Total Loss =  50.926630198955536
+	Epoch:  24
+		Seconds = 28.826242923736572  Accuracy =  0.7343819499719075  Total Loss =  50.90027755498886
+	Epoch:  25
+		Seconds = 28.71542191505432  Accuracy =  0.7355762477760092  Total Loss =  50.7123367190361
+	Epoch:  26
+		Seconds = 28.124017000198364  Accuracy =  0.7356940315104411  Total Loss =  50.7072719335556
+	Epoch:  27
+		Seconds = 28.428340911865234  Accuracy =  0.7366816590972936  Total Loss =  50.55664676427841
+	Epoch:  28
+		Seconds = 28.9882972240448  Accuracy =  0.7366234988060679  Total Loss =  50.58370369672775
+	Epoch:  29
+		Seconds = 28.906938314437866  Accuracy =  0.7378192597621498  Total Loss =  50.404661893844604
+	Epoch:  30
+		Seconds = 29.764726161956787  Accuracy =  0.7377669520788465  Total Loss =  50.393528521060944
+	Epoch:  31
+		Seconds = 31.02769684791565  Accuracy =  0.7383441655351626  Total Loss =  50.303738951683044
+	Epoch:  32
+		Seconds = 31.65364408493042  Accuracy =  0.7385976566157879  Total Loss =  50.275791466236115
+	Epoch:  33
+		Seconds = 31.362200021743774  Accuracy =  0.739012094414271  Total Loss =  50.17899149656296
+	Epoch:  34
+		Seconds = 29.903563976287842  Accuracy =  0.7398336542513342  Total Loss =  50.083584785461426
+	Epoch:  35
+		Seconds = 35.23971104621887  Accuracy =  0.740035935012642  Total Loss =  50.07100188732147
+	Epoch:  36
+		Seconds = 31.373321056365967  Accuracy =  0.7398705988388425  Total Loss =  50.05112451314926
+	Epoch:  37
+		Seconds = 30.4420268535614  Accuracy =  0.7406179037128946  Total Loss =  49.94411081075668
+	Epoch:  38
+		Seconds = 30.258315801620483  Accuracy =  0.7407005717997938  Total Loss =  49.960521161556244
+	Epoch:  39
+		Seconds = 29.619194984436035  Accuracy =  0.7409493076364828  Total Loss =  49.89890766143799
+	Epoch:  40
+		Seconds = 29.71301293373108  Accuracy =  0.741237914364641  Total Loss =  49.867204666137695
+	Epoch:  41
+		Seconds = 30.20081090927124  Accuracy =  0.7412090171130258  Total Loss =  49.83394330739975
+	Epoch:  42
+		Seconds = 28.98449182510376  Accuracy =  0.7416753968068172  Total Loss =  49.76993101835251
+	Epoch:  43
+		Seconds = 28.939746618270874  Accuracy =  0.7420642294456407  Total Loss =  49.719231486320496
+	Epoch:  44
+		Seconds = 30.323539972305298  Accuracy =  0.7420437453179137  Total Loss =  49.73898535966873
+	Epoch:  45
+		Seconds = 29.675846338272095  Accuracy =  0.7421417765006085  Total Loss =  49.692909598350525
+	Epoch:  46
+		Seconds = 28.563918828964233  Accuracy =  0.7429823573134189  Total Loss =  49.59037894010544
+	Epoch:  47
+		Seconds = 28.143235206604004  Accuracy =  0.7429750415535163  Total Loss =  49.59858965873718
+	Epoch:  48
+		Seconds = 28.701810836791992  Accuracy =  0.7428996892265195  Total Loss =  49.57459890842438
+	Epoch:  49
+		Seconds = 29.47399377822876  Accuracy =  0.743478731622811  Total Loss =  49.50958102941513
+	Epoch:  50
+		Seconds = 28.742115259170532  Accuracy =  0.7433316848487684  Total Loss =  49.512046337127686
+	Epoch:  51
+		Seconds = 28.90034317970276  Accuracy =  0.7434769026828353  Total Loss =  49.48534607887268
+	Epoch:  52
+		Seconds = 28.620519161224365  Accuracy =  0.7433905767159846  Total Loss =  49.50796264410019
+	Epoch:  53
+		Seconds = 28.669310808181763  Accuracy =  0.7435577418297596  Total Loss =  49.48349446058273
+	Epoch:  54
+		Seconds = 30.1540949344635  Accuracy =  0.7440753318428692  Total Loss =  49.442551612854004
+	Epoch:  55
+		Seconds = 29.424028873443604  Accuracy =  0.744050092471205  Total Loss =  49.41582894325256
+	Epoch:  56
+		Seconds = 30.679805994033813  Accuracy =  0.7442757836642004  Total Loss =  49.37195283174515
+	Epoch:  57
+		Seconds = 29.56885313987732  Accuracy =  0.7444692855136248  Total Loss =  49.36918479204178
+	Epoch:  58
+		Seconds = 30.62900400161743  Accuracy =  0.7443105335237384  Total Loss =  49.378169536590576
+	Epoch:  59
+		Seconds = 29.67332124710083  Accuracy =  0.744897623255923  Total Loss =  49.300620913505554
+	Epoch:  60
+		Seconds = 28.988095998764038  Accuracy =  0.7449309099634794  Total Loss =  49.2864425778389
+	Epoch:  61
+		Seconds = 35.27038788795471  Accuracy =  0.744951028303212  Total Loss =  49.29850381612778
+	Epoch:  62
+		Seconds = 28.72502303123474  Accuracy =  0.7451920825920028  Total Loss =  49.26706326007843
+	Epoch:  63
+		Seconds = 28.792695999145508  Accuracy =  0.7451298986328309  Total Loss =  49.285389959812164
+	Epoch:  64
+		Seconds = 28.88774085044861  Accuracy =  0.7452952348066297  Total Loss =  49.23288244009018
+	Epoch:  65
+		Seconds = 30.55198574066162  Accuracy =  0.7454708130442924  Total Loss =  49.22077238559723
+	Epoch:  66
+		Seconds = 31.516911029815674  Accuracy =  0.7456833358694636  Total Loss =  49.187127232551575
+	Epoch:  67
+		Seconds = 29.77924609184265  Accuracy =  0.7457780749602022  Total Loss =  49.174969494342804
+	Epoch:  68
+		Seconds = 28.709819078445435  Accuracy =  0.745723938336923  Total Loss =  49.187059700489044
+	Epoch:  69
+		Seconds = 28.298725843429565  Accuracy =  0.7457005279052344  Total Loss =  49.17398566007614
+	Epoch:  70
+		Seconds = 29.504814863204956  Accuracy =  0.7457319856728157  Total Loss =  49.179361283779144
+	Epoch:  71
+		Seconds = 29.039098978042603  Accuracy =  0.7460776553282144  Total Loss =  49.132993161678314
+	Epoch:  72
+		Seconds = 28.817625761032104  Accuracy =  0.7457996564519153  Total Loss =  49.13054150342941
+	Epoch:  73
+		Seconds = 28.95485806465149  Accuracy =  0.7459734057496022  Total Loss =  49.14908063411713
+	Epoch:  74
+		Seconds = 30.19142723083496  Accuracy =  0.746390769852046  Total Loss =  49.090011179447174
+	Epoch:  75
+		Seconds = 30.074194192886353  Accuracy =  0.7463761383322409  Total Loss =  49.07765203714371
+	Epoch:  76
+		Seconds = 29.99660587310791  Accuracy =  0.7462071442784907  Total Loss =  49.08989906311035
+	Epoch:  77
+		Seconds = 28.68366289138794  Accuracy =  0.7464427117473547  Total Loss =  49.08804094791412
+	Epoch:  78
+		Seconds = 29.75287175178528  Accuracy =  0.7463856488201143  Total Loss =  49.07117414474487
+	Epoch:  79
+		Seconds = 30.025678873062134  Accuracy =  0.7464445406873303  Total Loss =  49.081951439380646
+	Epoch:  80
+		Seconds = 29.83780598640442  Accuracy =  0.7467141264397414  Total Loss =  49.04735165834427
+	Epoch:  81
+		Seconds = 29.589833974838257  Accuracy =  0.7467144922277367  Total Loss =  49.035390973091125
+	Epoch:  82
+		Seconds = 30.004156827926636  Accuracy =  0.7466943738880043  Total Loss =  49.056680500507355
+	Epoch:  83
+		Seconds = 29.38809299468994  Accuracy =  0.7467605815151231  Total Loss =  49.061269760131836
+	Epoch:  84
+		Seconds = 29.777593851089478  Accuracy =  0.7469464018166492  Total Loss =  49.025289475917816
+	Epoch:  85
+		Seconds = 29.21333909034729  Accuracy =  0.7469742017042793  Total Loss =  49.016045808792114
+	Epoch:  86
+		Seconds = 28.8283908367157  Accuracy =  0.7473041424758874  Total Loss =  48.97344267368317
+	Epoch:  87
+		Seconds = 28.637010097503662  Accuracy =  0.7469266492649125  Total Loss =  49.01851236820221
+	Epoch:  88
+		Seconds = 28.541894912719727  Accuracy =  0.7470660144910575  Total Loss =  48.97865241765976
+	Epoch:  89
+		Seconds = 28.413438320159912  Accuracy =  0.7471347826341419  Total Loss =  48.978112399578094
+	Epoch:  90
+		Seconds = 28.23177218437195  Accuracy =  0.7470941801666824  Total Loss =  48.98832428455353
+	Epoch:  91
+		Seconds = 27.762356996536255  Accuracy =  0.7470846696788086  Total Loss =  48.9862859249115
+	Epoch:  92
+		Seconds = 27.443789958953857  Accuracy =  0.7473696185270158  Total Loss =  48.97175371646881
+	Epoch:  93
+		Seconds = 27.765490293502808  Accuracy =  0.7474050999625433  Total Loss =  48.96004641056061
+	Epoch:  94
+		Seconds = 27.40342092514038  Accuracy =  0.7473922973827141  Total Loss =  48.954864263534546
+	Epoch:  95
+		Seconds = 26.669214010238647  Accuracy =  0.7472957293519993  Total Loss =  48.954166650772095
+	Epoch:  96
+		Seconds = 26.97299313545227  Accuracy =  0.7473864447747914  Total Loss =  48.96699815988541
+	Epoch:  97
+		Seconds = 26.837925910949707  Accuracy =  0.747423755150295  Total Loss =  48.96283781528473
+	Epoch:  98
+		Seconds = 26.621052265167236  Accuracy =  0.7474091236304894  Total Loss =  48.943893790245056
+	Epoch:  99
+		Seconds = 26.77523398399353  Accuracy =  0.747488499625433  Total Loss =  48.92622834444046
+
+------------------------------------------------------------------------------------------------------------------------
+	TESTING ACCURACY: AVG = 0.7464189879233202
+------------------------------------------------------------------------------------------------------------------------
+
+	Pick 1 Accuracy:  0.8592761015178516
+	Pick 2 Accuracy:  0.7957352670066982
+	Pick 3 Accuracy:  0.7943218828734714
+	Pick 4 Accuracy:  0.7959196214588582
+	Pick 5 Accuracy:  0.7893443126651508
+	Pick 6 Accuracy:  0.7878080255638173
+	Pick 7 Accuracy:  0.7723222515823757
+	Pick 8 Accuracy:  0.7761936950777362
+	Pick 9 Accuracy:  0.7733054753272292
+	Pick 10 Accuracy:  0.7690653229275487
+	Pick 11 Accuracy:  0.7752104713328827
+	Pick 12 Accuracy:  0.796595587783445
+	Pick 13 Accuracy:  0.8316229336938487
+	Pick 14 Accuracy:  1.0
+	Pick 15 Accuracy:  0.7436858600135193
+	Pick 16 Accuracy:  0.7117925397898359
+	Pick 17 Accuracy:  0.7015301419529282
+	Pick 18 Accuracy:  0.6930498371535673
+	Pick 19 Accuracy:  0.6878264610090333
+	Pick 20 Accuracy:  0.6921895163768205
+	Pick 21 Accuracy:  0.6910219381798071
+	Pick 22 Accuracy:  0.6946475757389541
+	Pick 23 Accuracy:  0.6955693479997542
+	Pick 24 Accuracy:  0.7057702943526086
+	Pick 25 Accuracy:  0.7203342960732502
+	Pick 26 Accuracy:  0.7453450500829595
+	Pick 27 Accuracy:  0.7834449701960302
+	Pick 28 Accuracy:  1.0
+	Pick 29 Accuracy:  0.6777484176242856
+	Pick 30 Accuracy:  0.6610950654458305
+	Pick 31 Accuracy:  0.6586370060836969
+	Pick 32 Accuracy:  0.6531063725188964
+	Pick 33 Accuracy:  0.6504639587046027
+	Pick 34 Accuracy:  0.65611749523751
+	Pick 35 Accuracy:  0.6593129724082837
+	Pick 36 Accuracy:  0.6708043999262582
+	Pick 37 Accuracy:  0.6607263565415105
+	Pick 38 Accuracy:  0.677809869108339
+	Pick 39 Accuracy:  0.6869661402322866
+	Pick 40 Accuracy:  0.706569163645302
+	Pick 41 Accuracy:  0.7473114975726664
+	Pick 42 Accuracy:  1.0
+

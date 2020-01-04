@@ -2,6 +2,7 @@ import torch
 import numpy as np
 import random
 import re
+import time
 
 def train(model,loss_fn,optimizer,x_data,labels,n_batches=64,epochs=20):
 	"""
@@ -16,8 +17,9 @@ def train(model,loss_fn,optimizer,x_data,labels,n_batches=64,epochs=20):
 		np.random.shuffle(idx_list)
 		total_loss = 0
 		accuracy = 0
+		start_time = time.time()
 		for i in range(n_batches):
-			print ("\tBatch ",i,'/',n_batches)
+			#print ("\tBatch ",i,'/',n_batches)
 			batch_idx = idx_list[batch_size * i:batch_size * (i+1)]
 			#get batch data
 			x = x_data[batch_idx,:]
@@ -38,12 +40,13 @@ def train(model,loss_fn,optimizer,x_data,labels,n_batches=64,epochs=20):
 			amount_right = int((y_pred == y_true).sum())
 			v = amount_right/len(batch_idx)
 			accuracy += v
-			print("\t",v)
+			#print("\t",v)
 			total_loss += loss.item()
 			#zero gradients			
 			optimizer.zero_grad()
 		losses.append(total_loss)
-		print('Epoch',epoch,': Accuracy = ',accuracy/n_batches," Total Loss = ",total_loss)
+		print('Epoch: ',epoch)
+		print('\tSeconds =',time.time() - start_time,' Accuracy = ',accuracy/n_batches," Total Loss = ",total_loss)
 	return losses
 
 def generate_pack(card_df):

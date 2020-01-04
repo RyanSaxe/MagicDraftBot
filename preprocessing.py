@@ -81,6 +81,10 @@ def create_dataset(n_archetypes=15,full_dataset=False,save_clusters=True):
 	train_size = int(size * train_perc)
 	train_idx = random.sample(range(size),train_size)
 	test_idx = list(set(range(size)) - set(train_idx))
+	if not full_dataset:
+		#store the train/test split for the current model
+		torch.save(test_idx,'Data/test_idx.pkl')
+		torch.save(train_idx,'Data/train_idx.pkl')
 	train_pack = draft_packs[train_idx,:,:]
 	train_pick = draft_picks[train_idx,:,:]
 	test_pack = draft_packs[test_idx,:,:]
