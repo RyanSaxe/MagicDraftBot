@@ -1,5 +1,6 @@
 from models import DraftNet
 from utils import read_log
+from preprocessing import get_format_features
 import sys
 import torch
 import re
@@ -8,7 +9,7 @@ import re
 log_file = sys.argv[1]
 #get model and card mapping
 model = torch.load('Saved_Models/draft_model.pkl')
-card_df = torch.load('Data/ft.pkl')
+card_df = get_format_features()
 card_map = card_df['name'].to_dict()
 #read logfile
 pools,picks,packs = read_log(log_file,card_df)
