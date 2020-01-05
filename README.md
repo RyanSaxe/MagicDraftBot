@@ -21,6 +21,12 @@ I use L2 regularization on the MLP in attempt to avoid exploding weights. Howeve
 
 *Note: I cannot share the trained model nor any of the data used to train it.*
 
+### Results (Accuracy on Human Picks)
+
+The plot below displays the resulting accuracy on the test set. The blue line is the actual accuracy of the bot, where the yellow line is the accuracy if the bot's first or second choice was what the human selected.
+
+![Accuracy Plot](https://raw.githubusercontent.com/RyanSaxe/MagicDraftBot/master/Output/Images/top2_accuracy_curve.png)
+
 ### External Content about this Agent:
 
 * [Lords of Limited Podcast Episode (@16:25)](https://lordsoflimited.libsyn.com/lords-of-limited-129-bot-design-with-ryan-saxe)
