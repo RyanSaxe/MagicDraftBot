@@ -51,21 +51,21 @@ Draft: https://magic.flooey.org/draft/show?id=xg0h8Jo41w2TcHNwwAQ-_UlxxFQ
 
 Below are links to a draft where every seat at the table was my bot:
 
-seat 1: https://magic.flooey.org/draft/show?id=-cwaDX8iz4Nz0MXiHyowPj5jgE0
+seat 1: https://magic.flooey.org/draft/show?id=Y66phkMHXy1Fkxinlv2_0mgnyFM
 
-seat 2: https://magic.flooey.org/draft/show?id=BxMt_pcQQ1YVkIiogXHmFQ-Ul58
+seat 2: https://magic.flooey.org/draft/show?id=ISj69cO7itncFby65oNGRxzSsSM
 
-seat 3: https://magic.flooey.org/draft/show?id=VJmC1sLTAjUzlRCA-vWNNYVo8WU
+seat 3: https://magic.flooey.org/draft/show?id=7W_eV52n2LhQay9tywaEUaypoGw
 
-seat 4: https://magic.flooey.org/draft/show?id=OegjiTo2CWkTx3zAyHaWpEfNDVo
+seat 4: https://magic.flooey.org/draft/show?id=8S0w_5hMokFeH8rCvxcER_BKZJU
 
-seat 5: https://magic.flooey.org/draft/show?id=jXEeV2_kHD3GvVPbMAs4GFkvBIg
+seat 5: https://magic.flooey.org/draft/show?id=PPy7SadVNNPVCuELgdkYNLWrocI
 
-seat 6: https://magic.flooey.org/draft/show?id=McryI5AhEVGkVg5NGmegsDhxylQ
+seat 6: https://magic.flooey.org/draft/show?id=b6Rcmynu0iEWBtsrC90gQgrtEV8
 
-seat 7: https://magic.flooey.org/draft/show?id=YXzvkuYuSeeGRIBeGU12ry6TQzA
+seat 7: https://magic.flooey.org/draft/show?id=Tyhg2f-8J08rOgaU6TaQdkq4i7Y
 
-seat 8: https://magic.flooey.org/draft/show?id=JsywANCRzAzG16KpeWxAWdqCvEw
+seat 8: https://magic.flooey.org/draft/show?id=jfjbVeeFaHzTuVde2za0axX2W20
 
 ### Future Goals
 
