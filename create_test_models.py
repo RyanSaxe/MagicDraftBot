@@ -60,7 +60,7 @@ rank_model = torch.load('Saved_Models/rank_model_final.pkl')
 init_weights = rank_model.rank_matrix.clone().detach()
 #normalize the weights such that 1 is the largest initial weight
 smaller_init_weights = init_weights / init_weights.max(0, keepdim=True)[0]
-draft_model = DraftNetTest(smaller_init_weights)
+draft_model = DraftNet(smaller_init_weights)
 #add l2 regularization to avoid exploding weights
 #with regularization, also lower the learning rate and increase epochs
 #note: with this regularization there is no need for ceiling on pool bias.
