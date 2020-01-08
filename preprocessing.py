@@ -9,7 +9,7 @@ def add_clusters(features,drafts,n_archetypes,colors_only=False,save=True):
 	draft_pool_vectors = aggregate_drafts(drafts[:,:,1:],features,colors_only=colors_only)
 	kmeans = KMeans(n_clusters=n_archetypes).fit(draft_pool_vectors)
 	if save:
-		torch.save(kmeans,'Saved_Models/clusters.pkl')
+		torch.save(kmeans,'Saved_Models/clusters_final.pkl')
 	return kmeans
 def aggregate_drafts(drafts,features,colors_only=False):
 	"""
@@ -37,8 +37,8 @@ def create_drafts():
 	The actual code and pickled files are excluded from the repo due to NDA, but
 	this is the body replacing it in order to test that the pipeline works.
 	"""
-	draft_picks = torch.load('Data/dpicks.pkl')
-	draft_packs = torch.load('Data/dpacks.pkl')
+	draft_picks = torch.load('Data/draft_picks.pkl')
+	draft_packs = torch.load('Data/draft_packs.pkl')
 	return draft_packs,draft_picks
 
 def get_format_features():
@@ -83,8 +83,8 @@ def create_dataset(n_archetypes=15,full_dataset=False,save_clusters=True):
 	test_idx = list(set(range(size)) - set(train_idx))
 	if not full_dataset:
 		#store the train/test split for the current model
-		torch.save(test_idx,'Data/test_idx.pkl')
-		torch.save(train_idx,'Data/train_idx.pkl')
+		torch.save(test_idx,'Data/test_idx_final.pkl')
+		torch.save(train_idx,'Data/train_idx_final.pkl')
 	train_pack = draft_packs[train_idx,:,:]
 	train_pick = draft_picks[train_idx,:,:]
 	test_pack = draft_packs[test_idx,:,:]

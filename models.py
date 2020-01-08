@@ -48,16 +48,19 @@ class DraftNet(torch.nn.Module):
                                         )
                                     )
         #vector to express opposition to bias (staying open)
-        #originally I did not enforce a decaying structure,
-        #    and the bot learned to raredraft. So I added this
-        #    decay via an inverted cumulative sum on these weights
+        #the initialization of 2 as open_base and 7 is purposeful.
+        #This is because cumprod(sigmoid(open_base)) * 7 - minimum has a value
+        # of tensor(1.0090) at Pack 2 Pick 1. I tested the algorithm without
+        # this initialization and it did learn the same curve, but I see no 
+        # reason to change the initialization and I wanted to explain the numbers.
         self.open_base = torch.nn.Parameter(torch.tensor(
-                                            torch.zeros(42),
+                                            [2.0 for x in range(42)],
                                             requires_grad=True,
                                             dtype=torch.float
                                         ))
+        self.lift = torch.nn.Parameter(torch.tensor(7.0,requires_grad=True))
         #placeholder for future versions. Currently doesn't update, but I want to explore that.
-        self.arch_bias = torch.nn.Parameter(torch.ones(self.n_archs,requires_grad=False))
+        self.arch_bias = torch.ones(self.n_archs,requires_grad=False)
         self.relu = torch.nn.ReLU()
         self.sigmoid = torch.nn.Sigmoid()
     def forward(self,x):
@@ -72,7 +75,7 @@ class DraftNet(torch.nn.Module):
         #squash open_base numbers between 0 and 1
         open_base = self.sigmoid(self.open_base)
         #enforce decaying structure over time
-        open_decay = torch.flip(torch.cumsum(open_base,dim=0),dims=[0])
+        open_decay = torch.cumprod(open_base,dim=0) * self.relu(self.lift)
         #enforce this decay to go to zero
         open_decay = open_decay - open_decay.min()
         #get the proper open bias forr each pick

@@ -9,6 +9,7 @@ import sys
 #potential update: have these be command line params
 full_flag = False
 save = True
+#name = '_simple'
 #create dataset
 train_packs,train_picks,test_packs,test_picks = create_dataset(full_dataset=full_flag,save_clusters=save)
 #initialize model with 249 cards and 15 archetypes
@@ -25,7 +26,7 @@ train_y = torch.flatten(train_picks[:,16:,:],start_dim=0,end_dim=1)
 #train the model
 train_loss = utils.train(rank_model,loss_function,optimizer,train_x,train_y,epochs=5)
 if save:
-	torch.save(rank_model,'Saved_Models/rank_model.pkl')
+	torch.save(rank_model,'Saved_Models/rank_model_final.pkl')
 #initialize drafting model with learned weights from rank model
 init_weights = rank_model.rank_matrix.clone().detach()
 #normalize the weights such that 1 is the largest initial weight
@@ -34,7 +35,7 @@ draft_model = DraftNet(smaller_init_weights)
 #add l2 regularization to avoid exploding weights
 #with regularization, also lower the learning rate and increase epochs
 #note: with this regularization there is no need for ceiling on pool bias.
-optimizer = torch.optim.Adam(draft_model.parameters(), lr=0.01,weight_decay=1e-5)
+optimizer = torch.optim.Adam(draft_model.parameters(), lr=0.1,weight_decay=1e-5)
 #flatten the drafts so that the algorithm only considers each pick
 #individually and remove archetype label to avoid leakage
 train_x = torch.flatten(train_packs,start_dim=0,end_dim=1)[:,1:]
@@ -64,9 +65,9 @@ if not full_flag:
 	plt.xlabel('Time (pick number)')
 	plt.ylabel('Accuracy')
 	plt.title('Avg Accuracy in Test Set')
-	plt.savefig('Output/accuracy_curve.png')
+	plt.savefig('Output/accuracy_curve_final.png')
 if save:
 	#save the model so it can be used to make decisions in a real draft
-	torch.save(losses,'Data/train_loss.pkl')
-	torch.save(draft_model,'Saved_Models/draft_model.pkl')
+	torch.save(losses,'Data/train_loss_final.pkl')
+	torch.save(draft_model,'Saved_Models/draft_model_final.pkl')
 
