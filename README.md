@@ -12,12 +12,12 @@ MTG Draft is a game where 8 players sit at a table and each open a pack of 14 MT
 
 1. Cluster the dataset into archetypes via Kmeans
 1. for each cluster, learn pick-order given data of P2P2 - P3P14
-1. Initialize a multi-layer perceptron with the normalized learned pick-orders
+1. Initialize model weights with the normalized learned pick-orders
     1. Compute the bias towards each archetype given the cards in the pool
     1. Elevate the archetypal bias by adding a decaying function (simulated staying open)
 1. Use this final archetypal bias to select the best card in the pack
 
-I use L2 regularization on the MLP in attempt to avoid exploding weights. However this doesn't appear to do enough to fight against an overly strong bias towards one color. I attempted to put a ceiling on the bias, however this led to the bot refusing to commit to an archetype and/or never pass rares. Still working on a solution to this. 
+I use L2 regularization on the weights in attempt to avoid exploding weights. However this doesn't appear to do enough to fight against an overly strong bias towards one color. I attempted to put a ceiling on the bias, however this led to the bot refusing to commit to an archetype and/or never pass rares. Still working on a solution to this. 
 
 *Note: I cannot share the trained model nor any of the data used to train it.*
 
