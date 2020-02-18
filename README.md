@@ -30,6 +30,8 @@ The plot below displays the resulting accuracy on the test set. The blue line is
 ### External Content about this Agent:
 
 * [Lords of Limited Podcast Episode (@16:25)](https://lordsoflimited.libsyn.com/lords-of-limited-129-bot-design-with-ryan-saxe)
+* [Article explaining the math behind the algorithm and interpreting the results](https://draftsim.com/ryan-saxe-bot-model/)
+* [Article with learned archetypal pick orders for Theros Beyond Death](https://draftsim.com/theros-beyond-death-early-analysis/)  
 
 ### Next Step: Add More Features
 
